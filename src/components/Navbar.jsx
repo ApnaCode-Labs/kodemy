@@ -1,5 +1,4 @@
 import { useState } from "react";
-import MenuIcon from "@mui/icons-material/Menu";
 import {
   AppBar,
   Box,
@@ -59,7 +58,13 @@ const Navbar = () => {
           sx={{ display: { xs: "inline-flex", md: "none" } }}
           onClick={() => setOpenDrawer(true)}
         >
-          <MenuIcon />
+          <Box
+            component="span"
+            sx={{ fontSize: "1.4rem", lineHeight: 1, fontWeight: 700 }}
+            aria-hidden
+          >
+            ≡
+          </Box>
         </IconButton>
       </Toolbar>
       <Drawer anchor="right" open={openDrawer} onClose={() => setOpenDrawer(false)}>
