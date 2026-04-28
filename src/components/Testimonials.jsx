@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Avatar, Box, Card, CardContent, Container, Grid, Rating, Tab, Tabs, Typography } from "@mui/material";
 import useScrollReveal from "../hooks/useScrollReveal";
 
@@ -44,6 +44,14 @@ const Testimonials = () => {
   const isVisible = useScrollReveal(ref);
 
   const data = useMemo(() => (tab === 0 ? workshopTestimonials : privateTestimonials), [tab]);
+
+  useEffect(() => {
+    const intervalId = window.setInterval(() => {
+      setTab((prev) => (prev === 0 ? 1 : 0));
+    }, 5000);
+
+    return () => window.clearInterval(intervalId);
+  }, []);
 
   return (
     <Box id="testimonials" ref={ref} sx={{ py: 10, bgcolor: "#F9FAFB", color: "#111827" }}>

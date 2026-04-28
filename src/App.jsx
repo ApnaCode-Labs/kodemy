@@ -1,4 +1,5 @@
 import { useState } from "react";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import {
   Alert,
   Box,
@@ -7,6 +8,7 @@ import {
   DialogActions,
   DialogContent,
   DialogTitle,
+  Fab,
   MenuItem,
   Snackbar,
   Stack,
@@ -61,6 +63,24 @@ const App = () => {
       <Gallery />
       <Contact onOpenEnrollment={() => setEnrollmentOpen(true)} />
       <Footer />
+      <Fab
+        color="success"
+        aria-label="Chat on WhatsApp"
+        href="https://wa.me/919876543210"
+        target="_blank"
+        rel="noreferrer"
+        sx={{
+          position: "fixed",
+          right: 20,
+          bottom: 20,
+          zIndex: 1400,
+          bgcolor: "#25D366",
+          color: "#fff",
+          "&:hover": { bgcolor: "#1fb558" },
+        }}
+      >
+        <WhatsAppIcon />
+      </Fab>
 
       <Dialog open={enrollmentOpen} onClose={() => setEnrollmentOpen(false)} fullWidth maxWidth="sm">
         <DialogTitle>Private Course Enrollment</DialogTitle>

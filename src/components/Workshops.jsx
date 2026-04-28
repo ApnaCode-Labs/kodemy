@@ -46,8 +46,18 @@ const Workshops = () => {
                   <Typography color="grey.400" sx={{ mb: 2 }}>
                     {workshop.desc}
                   </Typography>
-                  <Button size="small" color="primary">
+                  <Button size="small" color="primary" sx={{ mr: 1 }}>
                     Learn More
+                  </Button>
+                  <Button
+                    size="small"
+                    variant="outlined"
+                    color="secondary"
+                    href="/brochures/kodemy-workshop-brochure.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Download Brochure
                   </Button>
                 </CardContent>
               </Card>
