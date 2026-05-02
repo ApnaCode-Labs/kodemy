@@ -1,13 +1,15 @@
 {
   "name": "kodemy",
-  "private": true,
+  "homepage": "https://apnacode-labs.github.io/kodemy/",
   "version": "0.0.0",
   "description": "Single-page workshop website for Kodemy",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "generate-brochure": "python3 scripts/generate_kodemy_brochure.py"
+    "generate-brochure": "python3 scripts/generate_kodemy_brochure.py",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
