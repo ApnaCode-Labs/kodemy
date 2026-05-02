@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate-brochure": "python3 scripts/generate_kodemy_brochure.py"
   },
   "repository": {
     "type": "git",
