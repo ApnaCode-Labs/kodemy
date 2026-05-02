@@ -9,7 +9,7 @@ const Footer = () => (
       <Grid container spacing={3}>
         <Grid item xs={12} md={4}>
           <Typography variant="h6" color="primary.main">
-            TechSpark Academy
+            kodemy
           </Typography>
           <Typography color="grey.400">Build. Learn. Lead the future with confidence.</Typography>
         </Grid>
@@ -44,7 +44,7 @@ const Footer = () => (
         </Grid>
       </Grid>
       <Divider sx={{ my: 3, borderColor: "rgba(255,255,255,0.12)" }} />
-      <Typography color="grey.500">© {new Date().getFullYear()} Kodemy. All rights reserved.</Typography>
+      <Typography color="grey.500">© {new Date().getFullYear()} kodemy. All rights reserved.</Typography>
     </Container>
   </Box>
 );

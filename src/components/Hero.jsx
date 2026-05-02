@@ -34,7 +34,7 @@ const Hero = () => {
               Explore Workshops
             </Button>
             <Button variant="outlined" color="secondary" size="large" onClick={() => scrollTo("private-courses")}>
-              Book a Session
+              Private Courses
             </Button>
           </Stack>
         </Stack>

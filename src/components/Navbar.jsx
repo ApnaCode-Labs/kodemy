@@ -1,4 +1,5 @@
 import { useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -42,7 +43,7 @@ const Navbar = () => {
     >
       <Toolbar sx={{ justifyContent: "space-between" }}>
         <Typography variant="h6" sx={{ color: "primary.main", fontWeight: 700 }}>
-          TechSpark Academy
+          kodemy
         </Typography>
         <Stack direction="row" spacing={1} sx={{ display: { xs: "none", md: "flex" } }}>
           {navItems.map((item) => (
@@ -56,13 +57,7 @@ const Navbar = () => {
           sx={{ display: { xs: "inline-flex", md: "none" } }}
           onClick={() => setOpenDrawer(true)}
         >
-          <Box
-            component="span"
-            sx={{ fontSize: "1.4rem", lineHeight: 1, fontWeight: 700 }}
-            aria-hidden
-          >
-            ≡
-          </Box>
+          <MenuIcon />
         </IconButton>
       </Toolbar>
       <Drawer anchor="right" open={openDrawer} onClose={() => setOpenDrawer(false)}>

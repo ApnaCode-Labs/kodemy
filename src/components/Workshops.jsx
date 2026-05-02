@@ -4,7 +4,7 @@ import SecurityIcon from "@mui/icons-material/Security";
 import StorageIcon from "@mui/icons-material/Storage";
 import TerminalIcon from "@mui/icons-material/Terminal";
 import WebIcon from "@mui/icons-material/Web";
-import { Box, Button, Card, CardContent, Container, Grid, Typography } from "@mui/material";
+import { Box, Card, CardContent, Container, Grid, Typography } from "@mui/material";
 import useScrollReveal from "../hooks/useScrollReveal";
 
 const workshopItems = [
@@ -43,22 +43,7 @@ const Workshops = () => {
                   <Typography variant="h6" sx={{ mt: 1.5, mb: 1 }}>
                     {workshop.title}
                   </Typography>
-                  <Typography color="grey.400" sx={{ mb: 2 }}>
-                    {workshop.desc}
-                  </Typography>
-                  <Button size="small" color="primary" sx={{ mr: 1 }}>
-                    Learn More
-                  </Button>
-                  <Button
-                    size="small"
-                    variant="outlined"
-                    color="secondary"
-                    href="/brochures/kodemy-workshop-brochure.pdf"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Download Brochure
-                  </Button>
+                  <Typography color="grey.400">{workshop.desc}</Typography>
                 </CardContent>
               </Card>
             </Grid>

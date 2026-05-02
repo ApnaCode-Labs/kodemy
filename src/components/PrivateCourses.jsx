@@ -2,17 +2,7 @@ import { useRef } from "react";
 import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 import PersonIcon from "@mui/icons-material/Person";
 import TuneIcon from "@mui/icons-material/Tune";
-import {
-  Box,
-  Button,
-  Card,
-  CardContent,
-  Chip,
-  Container,
-  Grid,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Box, Card, CardContent, Chip, Container, Grid, Stack, Typography } from "@mui/material";
 import useScrollReveal from "../hooks/useScrollReveal";
 
 const highlights = [
@@ -35,7 +25,7 @@ const highlights = [
 
 const courses = ["IoT", "Python", "Web Dev", "Cybersecurity"];
 
-const PrivateCourses = ({ onOpenEnrollment }) => {
+const PrivateCourses = () => {
   const ref = useRef(null);
   const isVisible = useScrollReveal(ref);
 
@@ -49,10 +39,19 @@ const PrivateCourses = ({ onOpenEnrollment }) => {
           Learn at your own pace, one-on-one with an expert
         </Typography>
         <Typography sx={{ color: "#374151", maxWidth: 760, mb: 4 }}>
-          Prefer focused guidance? Kodemy private courses are built for individual learners who
-          want a flexible and personalized learning path with practical outcomes.
+          Prefer focused guidance? Kodemy private courses are built for individual learners who want
+          a flexible and personalized learning path with practical outcomes.
         </Typography>
-        <Grid container spacing={3} sx={{ mb: 4, opacity: isVisible ? 1 : 0, transform: isVisible ? "translateY(0)" : "translateY(30px)", transition: "opacity 0.6s ease, transform 0.6s ease" }}>
+        <Grid
+          container
+          spacing={3}
+          sx={{
+            mb: 4,
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? "translateY(0)" : "translateY(30px)",
+            transition: "opacity 0.6s ease, transform 0.6s ease",
+          }}
+        >
           {highlights.map((item) => (
             <Grid item xs={12} md={4} key={item.title}>
               <Card sx={{ bgcolor: "white", borderColor: "rgba(17,24,39,0.12)", height: "100%" }}>
@@ -67,18 +66,18 @@ const PrivateCourses = ({ onOpenEnrollment }) => {
             </Grid>
           ))}
         </Grid>
-        <Card sx={{ bgcolor: "#111827", borderColor: "rgba(255,255,255,0.1)" }}>
+        <Card sx={{ bgcolor: "white", borderColor: "rgba(17,24,39,0.12)" }}>
           <CardContent>
-            <Stack spacing={3} alignItems={{ xs: "flex-start", md: "center" }}>
-              <Typography variant="h5">Ready to start your learning journey?</Typography>
-              <Button variant="contained" color="secondary" size="large" onClick={onOpenEnrollment}>
-                Enroll Now
-              </Button>
-              <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap">
-                {courses.map((course) => (
-                  <Chip key={course} label={course} color="primary" variant="outlined" />
-                ))}
-              </Stack>
+            <Typography variant="h6" sx={{ color: "#111827", mb: 1.5 }}>
+              Available as private courses
+            </Typography>
+            <Typography sx={{ color: "#4B5563", mb: 2 }}>
+              Topics you can cover in a one-on-one format:
+            </Typography>
+            <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap">
+              {courses.map((course) => (
+                <Chip key={course} label={course} color="primary" variant="outlined" />
+              ))}
             </Stack>
           </CardContent>
         </Card>
